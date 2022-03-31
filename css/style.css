@@ -1,0 +1,328 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200;400&display=swap');
+
+*{
+	font-family: 'Raleway', sans-serif;
+	margin: 0;
+	padding: 0;
+}
+
+html{
+	font-size: 62.5%
+}
+
+
+body{
+	background-color: rgba(216, 245, 162, 0.5);
+	line-height: 1.6;
+}
+
+h1{
+	font-size: 3rem;
+}
+
+h2{
+	font-size: 2.5rem;
+}
+
+h3{
+	font-size: 2rem;
+}
+
+ol, ul{
+    list-style: none
+}
+
+p{
+	line-height: 2rem;
+	font-size: 1.6rem;
+}
+
+a{
+	text-decoration: none;
+}
+
+/* selectores de clases generales*/
+
+.textCenter{
+	text-align: center
+}
+
+.bgVerde{
+	background-color:#c0eb75 ;
+}
+
+/*NAV Y HEADER*/
+
+.nav1{
+    background-color:#c0eb75;
+    padding: 10px 10px;
+    /*display flex*/
+    display: flex;
+    justify-content: center;
+}
+
+	.nav1 ol{
+		 /*display flex*/
+		 display: flex;
+	}
+
+    	.nav1 ol li a{
+	    	text-decoration: none;
+	    	font-size: 1.3rem;
+	    	color: white;
+    	}		
+
+    		.nav1 ol li a:hover{
+	    		font-weight: 800;
+		        color: black;	        
+		   	}	
+
+.nav2{
+    background-color: #e9fac8;
+    padding: 5px 10px;
+     /*position*/
+    position: sticky;
+    top: 0;
+    width: 100%;
+    /*display flex*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+    .nav2 ol{
+	   /*display flex*/
+	   display: flex;
+	}
+
+        .nav2 ol li{
+	        margin-right: 20px;	
+	       
+	    }
+
+	        .nav2 ol li a{
+	        	text-decoration: none;
+	        	font-size: 1.6rem;                
+	        }
+
+	        .nav2 ol li a:hover{
+	        		font-weight: 800;
+	        		color: black;  
+	        }
+
+.imgLogoAzomate{
+    width: 60px
+}
+
+.imgMatesPersonalizados{
+	width: 100%;
+
+
+	
+}
+
+
+/*MAIN*/
+.main .section1, .section2 {
+	background-color: white;
+	width: 70%;
+	margin: 0 auto;
+	padding: 20px 20px;
+	box-sizing: border-box;
+	border-radius: 5px;
+	/*display flex
+	display: flex;
+	flex-direction: column;
+	align-items: center;*/
+}
+	.main .section1 figure, .section2 figure{
+		/*width: 50%;*/
+		font-size: 1.5rem;
+		text-align: center;
+		padding-bottom: 10px;
+		/*display flex		display: flex;
+		flex-direction: column;
+		align-items: center;*/
+
+
+	}	
+	
+		.main .section1 figure img, .section2 figure img{
+			width: 100px;
+		}
+	
+	.main h2{
+		font-size: 1.5rem;
+		background-color: #c0eb75;
+		width: 70%;
+		margin: 20px auto;
+		border-style: solid;
+		border-color: #5c940d;
+		border-width: 2px;
+		border-radius: 5px;
+		}	
+
+.main .section3{
+	text-align: center;
+	margin: 10px auto;
+}	
+
+.main .section3 h3{
+	font-size: 1.5rem;
+}
+
+
+
+
+/*FOOTER*/
+
+	footer .section1{
+		padding: 5px 5px;
+		display: flex;
+		justify-content: flex-end;
+		background-color: 
+	}
+	
+	footer .section2{
+		background-color: white;
+		width: 100%;
+		font-size: 1.5rem;
+	}
+
+.logoIg{
+	width: 30px;
+
+}
+
+footer .section2 a{
+	color: black;
+}
+
+/* Inicio GRIDS */
+#contenedorIndex{
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: auto;
+	grid-template-areas: "nav1" "nav2" "header" "productos" "footer";
+
+}
+
+#nav1Index{
+	grid-area: nav1
+}
+
+#nav2Index{
+	grid-area: nav2;
+}
+
+#headerIndex{
+	grid-area: header;
+}
+
+#productosIndex{
+	grid-area: productos;
+}
+
+#footerIndex{
+	grid-area: footer;
+}
+
+
+/* media queries */
+@media (min-width: 768px){
+	#contenedorIndex{
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: auto;
+		grid-template-areas: "nav1 nav1" 
+		"nav2 nav2"
+		"header header" 
+		"productos productos"
+		"footer footer"
+	}
+
+	#productosIndex .section1, .section2{
+		display: flex;
+		flex-direction: row;
+		width: 90%;
+	}
+
+	.main h2{
+		width: 40%;
+	}
+
+	
+
+	footer .section2{
+		display: flex;
+		flex-direction: column;
+	}
+}
+
+
+@media (min-width: 1024px){
+	
+	#contenedorIndex p{
+		font-size: 2rem;
+	}
+
+	#contenedorIndex h3{
+		font-size: 2.5rem;
+	}
+
+	#contenedorIndex h2{
+		font-size: 2.7rem;
+		width: 35%;
+	}
+
+	#contenedorIndex ol li a, #contenedorIndex li{
+		font-size: 2rem;
+	}
+
+	#contenedorIndex .nav2 ol li a{
+		font-size: 2.5rem;
+
+	}
+
+	.nav2{
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+	}
+
+	.nav2 ol li{
+		padding-left: 20px;
+
+	}
+	
+	
+	.imgLogoAzomate{
+    width: 100px;
+	}
+
+	.main .section1 figure, .section2 figure{
+		font-size: 2rem;
+	}
+	.main .section1 figure img, .section2 figure img{
+			width: 250px;
+	}
+
+	.logoIg{
+	width: 40px;
+	}
+
+	footer .section2 a{
+		font-size: 2rem;
+	}
+
+}
+
+
+/* PRODUCTOS */
+
+
+/* CONTACTO */
+
+/* CREAR CUENTA */
+
+/* INICIAR SESION */
+
